@@ -1,0 +1,105 @@
+:root{
+    box-sizing: border-box;
+    --color-fondo: hsl(303, 50%, 75%);
+    --color-fondo2: hsl(302, 77%, 68%);
+    --color-titulo: hsl(337, 84%, 61%);
+    --color-texto: hsl(0, 43%, 99%);
+    background-color: var(--color-fondo);
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg,var(--color-fondo2),var(--color-fondo));
+    color: var(--color-texto);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: var(--color-titulo);
+}
+p{
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+.stage{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card{
+    background-color: var(--color-fondo2);
+    border-radius: 20px;
+    border: 2px solid var(--color-titulo);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+}
+
+.card1{
+    background-color: var(--color-fondo2);
+    border-radius: 20px;
+    border: 2px solid var(--color-titulo);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+}
+/* @keyframe: definimos la aniacio como girar*/
+@keyframes girar{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+@keyframes deslizar{
+    from{transform: translateX(-40px); opacity: 0;}
+    to{transform: translateX(0px); opacity: 1;}
+}
+
+@keyframes pulso{
+    0%, 100%{
+        transform: scale(1); opacity: 1;
+    }
+    50%{transform: scale(1.06); opacity: 0.5;}
+}
+
+@keyframes subir{
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform:translateY(0px); opacity: 1;}
+}
+
+@keyframes bajar{
+    from {transform: translateY(-40px); opacity: 0;}
+    to {transform:translateY(0px); opacity: 1;}
+}
+/*Opcion 1 shorthand*/
+.icono{animation: girar 1.2s linear 0s infinite normal forwards running;}
+
+/*Opcion 2 - propiedades separadas          */
+.icono-separado{
+    animation-name: pulso;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite ;
+    animation-direction:normal;
+    animation-fill-mode:forwards;
+    animation-play-state:running;
+}
+
+/*Opcion 3 Deslizar*/
+.card{
+    animation: deslizar 0.9s ease forwards;
+}
+
+.card1{
+    animation: bajar 0.9s ease forwards;
+}

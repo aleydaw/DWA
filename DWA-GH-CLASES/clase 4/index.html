@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjetas de Producto</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            --color-primario: hsl(337, 93%, 82%);
+            --color-acento: hsl(337, 93%, 63%);    
+            --color-texto: hsl(0, 43%, 99%);
+            --color-fondo: hsl(304, 32%, 90%);
+            background-color: var(--color-fondo);
+        }
+
+        .cards-container{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-card {
+            background-color: var(--color-primario);
+            color: var(--color-texto);
+            border-radius: 10px;
+            border: 2px solid var(--color-acento);
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hero{
+            background-image: 
+            linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.01),
+                rgba(0,0,0,0.35)
+            );
+        background-size: cover;
+        background-position: center;
+        padding:30px;
+        }
+
+        .btn-comprar{
+            background-color: var(--color-acento);
+            background: radial-gradient(circle, #efa9ee, #d87bbb);
+            color: var(--color-texto);
+            margin-top: 10px;
+            padding: 6px 12px;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cards-container">
+
+        <!-- ==========================================
+        TARJETA 1 – Auriculares Inalámbricos
+        ========================================== -->
+        <div class="product-card highlight hero">
+            <div class="card-image">🎧</div>
+            <h2 class="product-name">Auriculares Pro</h2>
+            <p class="product-desc">
+                Sonido envolvente, cancelación de ruido y 40 h de batería.
+            </p>
+            <div class="product-price">
+                $89.90 <small>USD</small>
+            </div>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <!-- ==========================================
+        TARJETA 2 – Reloj Inteligente
+        ========================================== -->
+        <div class="product-card highlight hero">
+            <div class="card-image">⌚</div>
+            <h2 class="product-name">Smartwatch Fit</h2>
+            <p class="product-desc">
+                Monitorea tu salud, notificaciones y GPS integrado.
+            </p>
+            <div class="product-price">
+                $149.00 <small>USD</small>
+            </div>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <!-- ==========================================
+        TARJETA 3 – Mochila Urbana
+        ========================================== -->
+        <div class="product-card highlight hero">
+            <div class="card-image">🎒</div>
+            <h2 class="product-name">Mochila Urban</h2>
+            <p class="product-desc">
+                Impermeable, con compartimento para laptop de 15&quot;.
+            </p>
+            <div class="product-price">
+                $59.50 <small>USD</small>
+            </div>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+:root {
+    box-sizing: border-box;
+    --color-primario: hsl(337, 93%, 82%);
+    --color-acento: hsl(337, 93%, 63%);    
+    --color-texto: hsl(0, 43%, 99%);
+    --color-fondo: hsl(304, 32%, 90%);
+    background-color: var(--color-fondo);
+}
+
+.cards-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    border-radius: 10px;
+    border: 2px solid var(--color-acento);
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero{
+    background-image: 
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.10),
+        rgba(0,0,0,0.75)
+    ),
+    url(./assets/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 480px;
+    color: var(--color-texto);
+    padding: 48px;
+}
+
+.btn-reservar{
+    display: inline-block;
+    background: radial-gradient(circle, #d87bbb, #efa9ee);
+    color: var(--color-texto);
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-comprar{
+    background-color: var(--color-acento);
+    background: radial-gradient(circle, #efa9ee, #d87bbb);
+    color: var(--color-texto);
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: none;
+}
+
+.pie{
+    font-size: 20px;
+    color:var(--color-texto);
+    height: 30px;
+    background: linear-gradient(to right, rgba(81, 62, 76, 0.3), rgba(218, 59, 172, 0.5), rgba(242, 187, 226, 0.7));
+    grid-column: 1/13;
+    text-align: center;
+}
